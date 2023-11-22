@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<table border="1">
+    <tr>
+        <th>id</th>
+        <th>audio_name</th>
+        <th>audio</th>
+        <th>video_name</th>
+        <th>video</th>
+        <th>pdf_name</th>
+        <th>pdf</th>
+    </tr>
+    {% for i in data %}
+    <tr>
+        <td>{{i.id}}</td>
+
+        <td>{{i.audio_name}}</td>
+
+        <td>
+            <audio controls>
+                <source src="{{i.audio}}">
+            </audio>
+        </td>
+
+        <td>{{i.video_name}}</td>
+
+        <td>
+            <video controls width="500px">
+                <source src="{{i.video}}">
+            </video>
+        </td>
+
+        <td>{{i.pdf_name}}</td>
+
+        <td>
+            <a href="{{i.pdf}}">view</a>
+        </td>
+
+    </tr>
+    {% endfor %}
+</table>
+
+</body>
+</html>

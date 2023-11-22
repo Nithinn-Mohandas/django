@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+         background-color: springgreen;
+        }
+    </style>
+</head>
+
+<body>
+<center>
+    <div id="d">
+        <form action="" method="post" id="f"> {% csrf_token %}
+
+            <table id="t">
+                <tr>
+                    <th><label for="">FULL NAME</label></th>
+                    <td><input type="text" name="fullname"></td>
+                </tr>
+                <tr>
+                    <th><label for="">STATE</label></th>
+                    <td>
+                        <select name="state" id="">
+                            <option value="Select" selected>Select</option>
+                            <option value="Kerala">Kerala</option>
+                            <option value="Tamilnadu">Tamilnadu</option>
+                            <option value="Karnadaka">Karnadaka</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <th>LANGUAGE</th>
+                    <td>
+                        <input type="checkbox" name="malayalam">Malayalam
+                        <input type="checkbox" name="english">English
+                        <input type="checkbox" name="hindi">Hindi
+                    </td>
+                </tr>
+                <tr>
+                    <td><input type="submit"></td>
+                </tr>
+            </table>
+
+        </form>
+    </div>
+</center>
+</body>
+
+</html>

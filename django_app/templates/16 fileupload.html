@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+      <style>
+          #button{
+            border: none;
+            border-radius: 5px;
+            width: 40%;
+            background-color: aqua  ;
+            margin-left: 100px;
+            margin-bottom: 30px;
+        }
+
+        #button:hover {
+            background-color: rgb(214, 237, 11);
+
+        }
+    </style>
+</head>
+<body>
+  <div>
+        <center>
+            <table border="1" width="80%">
+                <tr>
+                    <th>Id</th>
+                    <th>file name</th>
+                    <th>image</th>
+                    <th>description</th>
+                    <th>update</th>
+                    <th>Delete</th>
+                </tr>
+
+                {% for i,j,k,l in data %}
+                <tr>
+                    <td>{{i}}</td>
+                    <td>{{j}}</td>
+                    <td><img src="{% static k %}" height="200px" width="200px"></td>
+                    <td>{{l}}</td>
+                    <td><button id="button"><a href="http://127.0.0.1:8000/django_app/fileedit/{{i}}">update</a></button></td>
+                    <td><button><a href="http://127.0.0.1:8000/django_app/delete_file/{{i}}">Delete</a> </button></td>
+                </tr>
+                {% endfor %}
+            </table>
+        </center>
+    </div>
+</body>
+</html>

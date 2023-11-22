@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Registraion Page</title>
+    <style>
+        body {
+            background-image: linear-gradient(to right, #0f0c29, #302b63, #24243e);
+            font-family: 'Times New Roman', Times, serif;
+        }
+
+        #main {
+            margin-left: 31%;
+            margin-top: 10%;
+            background-image: linear-gradient(to right, #ff6e7f, #bfe9ff);
+            width: 40%;
+            padding-top: 10px;
+            padding-bottom: 30px;
+        }
+
+        #ip {
+            width: 200px;
+            height: 22px;
+        }
+
+        #button {
+            margin-left: 80%;
+            margin-top: 18px;
+            height: 25px;
+            width: 100px;
+            background-color: white;
+            border: none;
+        }
+
+        #button:hover {
+            background-color: #00DBDE;
+            background-image: linear-gradient(90deg, #00DBDE 0%, #FC00FF 100%);
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container" id="main">
+        <form action="" method="post" id="f"> {% csrf_token %}
+            <center>
+                <table>
+                    <h2>Employee Update Profile</h2>
+                    <tr id="t">
+                        <th><label for="">EMPLOYEE NAME </label></th>
+                        <td><input type="text" name="employeename" id="ip" value="{{data.employeename}}"></td>
+                    </tr>
+                    <tr id="t">
+                        <th><label for="">EMAIL ID </label></th>
+                        <td><input type="email" name="email" id="ip" value='{{data.email}}'></td>
+                    </tr>
+                    <tr id="t">
+                        <th><label for="">PHONE NUMBER </label></th>
+                        <td><input type="tel" name="phonenumber" id="ip" value='{{data.phonenumber}}'></td>
+                    </tr>
+                    <tr id="t">
+                        <th><label for="">COMPANY NAME </label></th>
+                        <td><input type="text" name="companyname" id="ip" value='{{data.companyname}}'></td>
+                    </tr>
+                    <tr id="t">
+                        <th><label for="">DESIGNATION </label></th>
+                        <td><input type="text" name="designation" id="ip" value='{{data.designation}}'></td>
+                    </tr>
+                    <tr>
+                        <td><b><input type="submit" value="UPDATE" id="button"></b></td>
+                    </tr>
+                </table>
+            </center>
+        </form>
+
+    </div>
+</body>
+
+</html>

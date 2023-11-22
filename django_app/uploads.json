@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "audio_name": "undertaker",
+    "audio": "http://127.0.0.1:8000/media/audio/undertaker.mp3",
+    "video_name": "car",
+    "video": "http://127.0.0.1:8000/media/video/mylivewallpapers-com-GTR-R34-Skyline-4K.mp4",
+    "pdf_name": "pdf",
+    "pdf": "http://127.0.0.1:8000/media/pdf/MANU_EM_BIO_OO3.pdf"
+  },
+  {
+    "id": 2,
+    "audio_name": "undertaker",
+    "audio": "http://127.0.0.1:8000/media/audio/undertaker_AZbCjhM.mp3",
+    "video_name": "car",
+    "video": "http://127.0.0.1:8000/media/video/mylivewallpapers-com-Delorean-4K.mp4",
+    "pdf_name": "pdf",
+    "pdf": "http://127.0.0.1:8000/media/pdf/PRCC0000353824_GST_Invoice.pdf"
+  }
+]

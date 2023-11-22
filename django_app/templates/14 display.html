@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        th{}
+
+    </style>
+</head>
+<body>
+
+
+<center>
+    <table border="1">
+        <tr>
+            <th>id</th>
+            <th>firstname</th>
+            <th>secondname</th>
+            <th>username</th>
+            <th>email</th>
+            <th>phone</th>
+            <th>gender</th>
+            <th>address</th>
+            <th>DOB</th>
+            <th>Password</th>
+            <th>Update Profile</th>
+            <th>Delete Profile</th>
+        </tr>
+
+        {% for i in data %}
+
+        <tr>
+            <td>{{i.id}}</td>
+            <td>{{i.firstname}}</td>
+            <td>{{i.lastname}}</td>
+            <td>{{i.username}}</td>
+            <td>{{i.email}}</td>
+            <td>{{i.phone}}</td>
+            <td>{{i.gender}}</td>
+            <td>{{i.address}}</td>
+            <td>{{i.dob}}</td>
+            <td>{{i.password}}</td>
+            <td><a href="http://127.0.0.1:8000/django_app/edit/{{i.id}}" >Update</a></td>
+            <td><button><a href="http://127.0.0.1:8000/django_app/delete_reg/{{i.id}}">Delete Data</a></button></td>
+        </tr>
+
+        {% endfor %}
+
+    </table>
+</center>
+</div>
+</body>
+</html>

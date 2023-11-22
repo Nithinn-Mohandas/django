@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Search</title>
+    <style>
+        body {
+            background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+            background-size: 400% 400%;
+            animation: gradient 15s ease infinite;
+            height: 100vh;
+        }
+
+        @keyframes gradient {
+            0% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+
+        #main {
+            background-color: #151B54;
+            width: 50%;
+            margin-top: 10%;
+            padding-top: 8px;
+            color: white;
+        }
+
+        input {
+            margin-left: 10px;
+            height: 20px;
+            width: 200px;
+        }
+
+
+        #btn {
+            margin-left: 100%;
+            margin-top: 8px;
+            margin-bottom: 20px;
+            width: 80px;
+            height: 25px;
+            border: none;
+            border-radius: 8px;
+            background-image: linear-gradient(45deg,
+                    hsl(217deg 39% 59%) 0%,
+                    hsl(204deg 67% 55%) 11%,
+                    hsl(196deg 100% 46%) 22%,
+                    hsl(194deg 100% 48%) 33%,
+                    hsl(189deg 100% 47%) 44%,
+                    hsl(182deg 100% 44%) 56%,
+                    hsl(171deg 100% 45%) 67%,
+                    hsl(159deg 100% 47%) 78%,
+                    hsl(145deg 100% 49%) 89%,
+                    hsl(115deg 100% 50%) 100%);
+        }
+
+        #btn:hover {
+            background-image: linear-gradient(45deg,
+                    hsl(240deg 100% 20%) 0%,
+                    hsl(289deg 100% 21%) 11%,
+                    hsl(315deg 100% 27%) 22%,
+                    hsl(329deg 100% 36%) 33%,
+                    hsl(337deg 100% 43%) 44%,
+                    hsl(357deg 91% 59%) 56%,
+                    hsl(17deg 100% 59%) 67%,
+                    hsl(34deg 100% 53%) 78%,
+                    hsl(45deg 100% 50%) 89%,
+                    hsl(55deg 100% 50%) 100%);
+        }
+    </style>
+</head>
+
+<body>
+    <center>
+        <div class="container" id="main">
+
+            <h2>Product Details</h2>
+
+
+            <form action="" method="post">{% csrf_token %}
+
+                <table>
+
+                    <tr>
+                        <th><label for="">Product Search</label></th>
+                        <td><input type="text" name="productname"></td>
+                    </tr>
+
+                    <tr>
+                        <th><label for="">Company Name</label></th>
+                        <td><input type="text" name="companyname"></td>
+                    </tr>
+
+                    <tr>
+                        <td><input type="submit" id="btn" value="SEARCH"></td>
+                    </tr>
+
+                </table>
+
+            </form>
+
+        </div>
+    </center>
+</body>
+
+</html>

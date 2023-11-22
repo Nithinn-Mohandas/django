@@ -1,0 +1,56 @@
+[
+  {
+    "id": 1,
+    "movie_name": "Kaithi",
+    "director": "Lokesh Kanagaraj",
+    "release": "2019-08-29",
+    "characters": "Karthi,Monika siva,Narain,Arjun Das",
+    "theater": "PVR",
+    "rating": 8.0
+  },
+  {
+    "id": 2,
+    "movie_name": "Leo",
+    "director": "Lokesh Kanagaraj",
+    "release": "2023-10-19",
+    "characters": "Vijay,Trisha,Sanjay Dutt,Arjun Das",
+    "theater": "PVR Lulu",
+    "rating": 10.0
+  },
+  {
+    "id": 3,
+    "movie_name": "Leo",
+    "director": "Lokesh Kanagaraj",
+    "release": "2023-10-19",
+    "characters": "Vijay,Trisha,Sanjay Dutt,Arjun Das",
+    "theater": "PVR Lulu",
+    "rating": 10.0
+  },
+  {
+    "id": 4,
+    "movie_name": "hello",
+    "director": "Roby",
+    "release": "2023-07-28",
+    "characters": "Mammoootty",
+    "theater": "PVR Lulu",
+    "rating": 8.0
+  },
+  {
+    "id": 5,
+    "movie_name": "Kannur Squad",
+    "director": "Roby Varghese Raj",
+    "release": "2023-07-28",
+    "characters": "Mammoootty,Rony david,Kishore",
+    "theater": "PVR Lulu",
+    "rating": 8.4
+  },
+  {
+    "id": 6,
+    "movie_name": "Bheeshma Parvam",
+    "director": "Amal Neerad",
+    "release": "2022-07-28",
+    "characters": "Mammoootty,Rony david,Kishore",
+    "theater": "PVR Lulu",
+    "rating": 8.0
+  }
+]

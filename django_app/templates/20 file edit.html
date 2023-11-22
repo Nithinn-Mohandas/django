@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>File Upload</title>
+    <style>
+        body{
+            background: #16BFFD;
+            background: -webkit-linear-gradient(to right, #CB3066, #16BFFD);
+            background: linear-gradient(to right, #CB3066, #16BFFD);
+
+        }
+        #main {
+            padding-top: 30px;
+            background-color: black;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            width: 70%;
+            align-items: center;
+            font-family: 'Times New Roman', Times, serif;
+            margin-top: 10%;
+        }
+
+        #d1 {
+            display: flex;
+            margin-top: 10px;
+        }
+
+        input {
+            margin-left: 10px;
+            width: 300px;
+            height: 30px;
+        }
+
+        #button{
+            border: none;
+            border-radius: 5px;
+            width: 40%;
+            background-color: aqua  ;
+            margin-left: 100px;
+            margin-bottom: 30px;
+        }
+
+        #button:hover {
+            background-color: rgb(214, 237, 11);
+
+        }
+
+
+    </style>
+</head>
+
+<body>
+    <center>
+        <div class="container" id="main">
+            <h1>File edit</h1>
+            <form action="" method="post" enctype="multipart/form-data" id="fm">{% csrf_token %}
+                <div id="d1">
+                    <label for="">File Name &nbsp; : </label>
+                    <input type="text" name="filename" value="{{file.filename}}">
+                </div>
+                      <img src="{% static img %}" height="250px" width="200px"> <br>
+                <div id="d1">
+
+                    <label for="">File Upload :</label>
+                    <input type="file" name="fileupload" value="{{file.upload}}">
+                </div>
+                <div id="d1">
+                    <label for="">Description :</label>
+                    <input type="text" name="description" value="{{file.description}}">
+                </div>
+                <div id="d1">
+                    <input type="submit" id="button">
+                </div>
+            </form>
+        </div>
+    </center>
+</body>
+
+</html>

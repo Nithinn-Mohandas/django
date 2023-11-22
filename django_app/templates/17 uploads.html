@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #main {
+            background-color: black;
+            padding-top: 1%;
+            padding-bottom: 5%;
+
+        }
+
+        #t {
+            color: black;
+            width: 90%;
+            align-items: center;
+            align-content: center;
+            background-color: white;
+
+        }
+
+        #button {
+            border: none;
+            width: 80px;
+            height: 30px;
+            background-color: black;
+            margin-left: 50px;
+            margin-bottom: 30px;
+        }
+
+        #button:hover {
+            background-color: blue;
+            
+
+        }
+    </style>
+
+</head>
+
+<body>
+    <div id="main">
+        <center>
+            <h1 style="font-family: 'Times New Roman', Times, serif; color: white;">FILES UPLOADED</h1>
+            <table border="1" id="t">
+                <tr>
+                    <th>Id</th>
+                    <th>audio name</th>
+                    <th>audio</th>
+                    <th>video name</th>
+                    <th>video</th>
+                    <th>pdf name</th>
+                    <th>pdf</th>
+                    <th>update</th>
+                </tr>
+
+                {% for i,j,k,l,m,n,o in data %}
+                <tr>
+                    <td>{{i}}</td>
+                    <td>{{j}}</td>
+                    <td><audio controls>
+                            <source src="{% static k %}">
+                        </audio></td>
+                    <td>{{l}}</td>
+                    <td><video controls height="200px">
+                            <source src="{% static m %}">
+                        </video></td>
+                    <td>{{n}}</td>
+                    <td><a href="{% static o %}">View Pdf</a></td>
+                    <td><button id="button"><a href="http://127.0.0.1:8000/django_app/files_edit/{{i}}"
+                                style="color: white;">UPDATE</a></button></td>
+                </tr>
+                {% endfor %}
+            </table>
+        </center>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<form method="post">{% csrf_token %}
+
+<!--    as_p kodukunath p means paragraph... paragraph ayit display cheyum-->
+ <!--    as_table kodukunath table means paragraph... table ayit display cheyum-->
+
+
+    <table>
+        {{form.as_table}}
+
+    </table>
+     <input type="submit">
+
+
+</form>
+
+</body>
+</html>
